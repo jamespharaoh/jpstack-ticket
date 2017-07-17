@@ -3,8 +3,6 @@ package wbs.services.ticket.core.console;
 import static wbs.utils.etc.NumberUtils.integerToDecimalString;
 import static wbs.utils.string.StringUtils.stringFormat;
 
-import javax.inject.Provider;
-
 import lombok.NonNull;
 
 import org.joda.time.Instant;
@@ -17,9 +15,11 @@ import wbs.framework.component.annotations.NamedDependency;
 import wbs.framework.component.annotations.PrototypeComponent;
 import wbs.framework.component.annotations.PrototypeDependency;
 import wbs.framework.component.annotations.SingletonDependency;
+import wbs.framework.component.manager.ComponentProvider;
 import wbs.framework.database.Database;
 import wbs.framework.database.OwnedTransaction;
 import wbs.framework.logging.LogContext;
+import wbs.framework.logging.OwnedTaskLogger;
 import wbs.framework.logging.TaskLogger;
 
 import wbs.platform.currency.logic.CurrencyLogic;
@@ -68,11 +68,11 @@ class TicketPendingFormAction
 
 	@PrototypeDependency
 	@NamedDependency ("ticketPendingFormResponder")
-	Provider <WebResponder> pendingFormResponderProvider;
+	ComponentProvider <WebResponder> pendingFormResponderProvider;
 
 	@PrototypeDependency
 	@NamedDependency ("queueHomeResponder")
-	Provider <WebResponder> queueHomeResponderProvider;
+	ComponentProvider <WebResponder> queueHomeResponderProvider;
 
 	// details
 
@@ -81,7 +81,19 @@ class TicketPendingFormAction
 	WebResponder backupResponder (
 			@NonNull TaskLogger parentTaskLogger) {
 
-		return pendingFormResponderProvider.get ();
+		try (
+
+			OwnedTaskLogger taskLogger =
+				logContext.nestTaskLogger (
+					parentTaskLogger,
+					"backupResponder");
+
+		) {
+
+			return pendingFormResponderProvider.provide (
+				taskLogger);
+
+		}
 
 	}
 
@@ -219,7 +231,8 @@ class TicketPendingFormAction
 
 			// return
 
-			return queueHomeResponderProvider.get ();
+			return queueHomeResponderProvider.provide (
+				transaction);
 
 		}
 

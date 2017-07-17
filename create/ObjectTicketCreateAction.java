@@ -11,8 +11,6 @@ import static wbs.utils.string.StringUtils.stringFormat;
 
 import java.util.List;
 
-import javax.inject.Provider;
-
 import com.google.common.base.Optional;
 
 import lombok.Getter;
@@ -32,11 +30,13 @@ import wbs.console.request.ConsoleRequestContext;
 import wbs.framework.component.annotations.ClassSingletonDependency;
 import wbs.framework.component.annotations.PrototypeComponent;
 import wbs.framework.component.annotations.SingletonDependency;
+import wbs.framework.component.manager.ComponentProvider;
 import wbs.framework.database.Database;
 import wbs.framework.database.OwnedTransaction;
 import wbs.framework.entity.record.PermanentRecord;
 import wbs.framework.entity.record.Record;
 import wbs.framework.logging.LogContext;
+import wbs.framework.logging.OwnedTaskLogger;
 import wbs.framework.logging.TaskLogger;
 
 import wbs.platform.event.logic.EventLogic;
@@ -122,13 +122,13 @@ class ObjectTicketCreateAction <
 	String typeCode;
 
 	@Getter @Setter
-	Provider <WebResponder> responderProvider;
+	ComponentProvider <WebResponder> responderProvider;
 
 	@Getter @Setter
 	String targetContextTypeName;
 
 	@Getter @Setter
-	Provider <WebResponder> targetResponderProvider;
+	ComponentProvider <WebResponder> targetResponderProvider;
 
 	@Getter @Setter
 	String createPrivDelegate;
@@ -165,7 +165,19 @@ class ObjectTicketCreateAction <
 	WebResponder backupResponder (
 			@NonNull TaskLogger parentTaskLogger) {
 
-		return responderProvider.get ();
+		try (
+
+			OwnedTaskLogger taskLogger =
+				logContext.nestTaskLogger (
+					parentTaskLogger,
+					"backupResponder");
+
+		) {
+
+			return responderProvider.provide (
+				taskLogger);
+
+		}
 
 	}
 
@@ -470,22 +482,11 @@ class ObjectTicketCreateAction <
 
 			requestContext.setEmptyFormData ();
 
-			return targetResponderProvider.get ();
+			return targetResponderProvider.provide (
+				transaction);
 
 		}
 
 	}
-
-	/*
-	void prepareFieldSet (
-			@NonNull TaskLogger parentTaskLogger) {
-
-		fields =
-			formFieldsProvider.getFieldsForParent (
-				parentTaskLogger,
-				ticketManager);
-
-	}
-	*/
 
 }

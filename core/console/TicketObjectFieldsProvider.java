@@ -1,42 +1,32 @@
 package wbs.services.ticket.core.console;
 
-import static wbs.utils.string.StringUtils.stringFormat;
-import static wbs.utils.string.StringUtils.underscoreToCamel;
-
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Set;
+import static wbs.utils.etc.Misc.todo;
 
 import lombok.Getter;
 import lombok.NonNull;
 import lombok.Setter;
 import lombok.experimental.Accessors;
 
-import wbs.console.forms.basic.IntegerFormFieldSpec;
-import wbs.console.forms.basic.YesNoFormFieldSpec;
 import wbs.console.forms.core.ConsoleFormBuilder;
 import wbs.console.forms.core.FormFieldSet;
-import wbs.console.forms.object.ObjectFormFieldSpec;
-import wbs.console.forms.text.TextFormFieldSpec;
-import wbs.console.forms.types.FieldsProvider;
+import wbs.console.forms.object.ObjectFieldsProvider;
+import wbs.console.forms.types.FieldsProvider.FormFieldSetPair;
 
 import wbs.framework.component.annotations.ClassSingletonDependency;
 import wbs.framework.component.annotations.PrototypeComponent;
 import wbs.framework.component.annotations.SingletonDependency;
-import wbs.framework.database.NestedTransaction;
 import wbs.framework.database.Transaction;
 import wbs.framework.logging.LogContext;
 
 import wbs.services.ticket.core.model.TicketFieldTypeObjectHelper;
-import wbs.services.ticket.core.model.TicketFieldTypeRec;
 import wbs.services.ticket.core.model.TicketManagerRec;
 import wbs.services.ticket.core.model.TicketRec;
 
 @Accessors (fluent = true)
-@PrototypeComponent ("ticketFieldsProvider")
+@PrototypeComponent ("ticketObjectFieldsProvider")
 public
-class TicketFieldsProvider
-	implements FieldsProvider <TicketRec, TicketManagerRec> {
+class TicketObjectFieldsProvider
+	implements ObjectFieldsProvider <TicketRec, TicketManagerRec> {
 
 	// singleton dependencies
 
@@ -79,18 +69,7 @@ class TicketFieldsProvider
 
 	// implementation
 
-	@Override
-	public
-	FormFieldSetPair <TicketRec> getFieldsForObject (
-			@NonNull Transaction parentTransaction,
-			@NonNull TicketRec ticket) {
-
-		return getFieldsForParent (
-			parentTransaction,
-			ticket.getTicketManager ());
-
-	}
-
+/*
 	@Override
 	public
 	FormFieldSetPair <TicketRec> getFieldsForParent (
@@ -241,13 +220,45 @@ class TicketFieldsProvider
 		}
 
 	}
+*/
 
 	@Override
 	public
-	FormFieldSetPair <TicketRec> getStaticFields (
-			@NonNull Transaction parentTransaction) {
+	FormFieldSetPair <TicketRec> getListFields (
+			@NonNull Transaction parentTransaction,
+			@NonNull TicketRec object) {
 
-		throw new UnsupportedOperationException ();
+		throw todo ();
+
+	}
+
+	@Override
+	public
+	FormFieldSetPair <TicketRec> getCreateFields (
+			@NonNull Transaction parentTransaction,
+			@NonNull TicketManagerRec parent) {
+
+		throw todo ();
+
+	}
+
+	@Override
+	public
+	FormFieldSetPair <TicketRec> getSummaryFields (
+			@NonNull Transaction parentTransaction,
+			@NonNull TicketRec object) {
+
+		throw todo ();
+
+	}
+
+	@Override
+	public
+	FormFieldSetPair <TicketRec> getSettingsFields (
+			@NonNull Transaction parentTransaction,
+			@NonNull TicketRec object) {
+
+		throw todo ();
 
 	}
 

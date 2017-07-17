@@ -3,7 +3,7 @@
 	package="wbs.services.ticket.core">
 
 	<plugin-dependencies>
-		<plugin-dependency name="sms-apps-common"/>
+		<plugin-dependency name="menu"/>
 		<plugin-dependency name="platform-scaffold"/>
 	</plugin-dependencies>
 
@@ -23,11 +23,7 @@
 	</fixtures>
 
 	<layer name="console">
-		<component class="console.TicketCreateFieldsProvider"/>
-		<component class="console.TicketFieldsProvider"/>
-		<component class="console.TicketListFieldsProvider"/>
-		<component class="console.TicketSettingsFieldsProvider"/>
-		<component class="console.TicketSummaryFieldsProvider"/>
+		<component class="console.TicketObjectFieldsProvider"/>
 		<component class="console.TicketManagerQueueConsole"/>
 		<component class="console.TicketPendingFormAction"/>
 		<component class="console.TicketPendingFormResponder"/>

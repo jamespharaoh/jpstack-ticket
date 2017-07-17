@@ -1,5 +1,6 @@
 package wbs.services.ticket.core.logic;
 
+import static wbs.utils.etc.OptionalUtils.optionalAbsent;
 import static wbs.utils.etc.OptionalUtils.optionalOrNull;
 
 import com.google.common.base.Optional;
@@ -194,7 +195,7 @@ class TicketHooks
 
 	@Override
 	public
-	void setDynamic (
+	Optional <String> setDynamic (
 			@NonNull Transaction parentTransaction,
 			@NonNull TicketRec ticket,
 			@NonNull String name,
@@ -310,6 +311,8 @@ class TicketHooks
 				ticketFieldValue);
 
 		}
+
+		return optionalAbsent ();
 
 	}
 
