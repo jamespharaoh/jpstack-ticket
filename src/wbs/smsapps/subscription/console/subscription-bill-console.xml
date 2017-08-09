@@ -1,7 +1,0 @@
-<console-module
-	name="subscription-bill">
-
-	<console-helper-provider
-		object-name="subscriptionBill"/>
-
-</console-module>

@@ -1,7 +1,0 @@
-<console-module
-	name="dialogue-mms-route">
-
-	<console-helper-provider
-		object-name="dialogueMmsRoute"/>
-
-</console-module>

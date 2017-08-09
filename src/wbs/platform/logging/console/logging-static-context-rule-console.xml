@@ -1,7 +1,0 @@
-<console-module
-	name="logging-static-context-rule">
-
-	<console-helper-provider
-		object-name="loggingStaticContextRule"/>
-
-</console-module>

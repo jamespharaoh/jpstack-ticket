@@ -1,7 +1,0 @@
-<console-module
-	name="sms-simple-tracker-route">
-
-	<console-helper-provider
-		object-name="smsSimpleTrackerRoute"/>
-
-</console-module>

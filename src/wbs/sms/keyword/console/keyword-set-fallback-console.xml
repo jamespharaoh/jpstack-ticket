@@ -1,7 +1,0 @@
-<console-module
-	name="keyword-set-fallback">
-
-	<console-helper-provider
-		object-name="keywordSetFallback"/>
-
-</console-module>

@@ -1,7 +1,0 @@
-<console-module
-	name="inbox-multipart-log">
-
-	<console-helper-provider
-		object-name="inboxMultipartLog"/>
-
-</console-module>

@@ -1,7 +1,0 @@
-<console-module
-	name="chat-contact-note">
-
-	<console-helper-provider
-		object-name="chatContactNote"/>
-
-</console-module>

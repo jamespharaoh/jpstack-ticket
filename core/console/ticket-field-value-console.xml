@@ -1,0 +1,7 @@
+<console-module
+	name="ticket-field-value">
+
+	<console-helper-provider
+		object-name="ticketFieldValue"/>
+
+</console-module>

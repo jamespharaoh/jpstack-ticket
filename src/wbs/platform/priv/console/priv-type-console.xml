@@ -1,7 +1,0 @@
-<console-module
-	name="priv-type">
-
-	<console-helper-provider
-		object-name="privType"/>
-
-</console-module>

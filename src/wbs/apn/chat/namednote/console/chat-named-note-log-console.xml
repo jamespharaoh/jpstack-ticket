@@ -1,7 +1,0 @@
-<console-module
-	name="chat-named-note-log">
-
-	<console-helper-provider
-		object-name="chatNamedNoteLog"/>
-
-</console-module>

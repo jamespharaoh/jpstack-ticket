@@ -1,7 +1,0 @@
-<console-module
-	name="router-type">
-
-	<console-helper-provider
-		object-name="routerType"/>
-
-</console-module>

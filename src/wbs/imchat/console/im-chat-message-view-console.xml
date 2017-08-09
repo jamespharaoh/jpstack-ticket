@@ -1,7 +1,0 @@
-<console-module
-	name="im-chat-message-view">
-
-	<console-helper-provider
-		object-name="imChatMessageView"/>
-
-</console-module>

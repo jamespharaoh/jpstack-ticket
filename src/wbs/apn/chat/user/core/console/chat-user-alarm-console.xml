@@ -1,7 +1,0 @@
-<console-module
-	name="chat-user-alarm">
-
-	<console-helper-provider
-		object-name="chatUserAlarm"/>
-
-</console-module>

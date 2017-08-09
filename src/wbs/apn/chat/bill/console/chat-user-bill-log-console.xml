@@ -1,7 +1,0 @@
-<console-module
-	name="chat-user-bill-log">
-
-	<console-helper-provider
-		object-name="chatUserBillLog"/>
-
-</console-module>

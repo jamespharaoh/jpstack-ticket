@@ -1,9 +1,0 @@
-<plugin
-	name="urban-airship"
-	package="wbs.integrations.urbanairship">
-
-	<layer name="logic">
-		<component class="logic.UrbanAirshipApi"/>
-	</layer>
-
-</plugin>

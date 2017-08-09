@@ -1,7 +1,0 @@
-<console-module
-	name="chat-stats">
-
-	<console-helper-provider
-		object-name="chatStats"/>
-
-</console-module>

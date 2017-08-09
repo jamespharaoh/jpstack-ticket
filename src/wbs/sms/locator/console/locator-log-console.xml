@@ -1,7 +1,0 @@
-<console-module
-	name="locator-log">
-
-	<console-helper-provider
-		object-name="locatorLog"/>
-
-</console-module>

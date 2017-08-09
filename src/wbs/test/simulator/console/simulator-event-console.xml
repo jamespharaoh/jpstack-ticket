@@ -1,7 +1,0 @@
-<console-module
-	name="simulator-event">
-
-	<console-helper-provider
-		object-name="simulatorEvent"/>
-
-</console-module>

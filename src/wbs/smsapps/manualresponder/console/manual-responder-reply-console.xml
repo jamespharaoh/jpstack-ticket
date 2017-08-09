@@ -1,7 +1,0 @@
-<console-module
-	name="manual-responder-reply">
-
-	<console-helper-provider
-		object-name="manualResponderReply"/>
-
-</console-module>

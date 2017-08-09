@@ -1,7 +1,0 @@
-<console-module
-	name="chat-user-session">
-
-	<console-helper-provider
-		object-name="chatUserSession"/>
-
-</console-module>

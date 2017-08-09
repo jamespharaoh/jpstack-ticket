@@ -1,7 +1,0 @@
-<console-module
-	name="delivery-type">
-
-	<console-helper-provider
-		object-name="deliveryType"/>
-
-</console-module>

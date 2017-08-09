@@ -1,0 +1,44 @@
+<record
+	name="ticketFieldType"
+	type="minor">
+
+	<fields>
+
+		<!-- id -->
+
+		<generated-id-field/>
+
+		<!-- identity -->
+
+		<parent-field
+			type="ticketManager"/>
+
+		<code-field/>
+
+		<!-- details -->
+
+		<name-field/>
+
+		<description-field/>
+
+		<deleted-field/>
+
+		<!-- settings -->
+
+		<yes-no-field
+			name="required"/>
+
+		<enum-field
+			name="dataType"
+			type="ticketFieldDataType"/>
+
+		<reference-field
+			type="objectType"
+			nullable="yes"/>
+
+		<yes-no-field
+			name="visible"/>
+
+	</fields>
+
+</record>

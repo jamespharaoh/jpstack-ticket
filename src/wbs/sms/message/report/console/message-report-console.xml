@@ -1,7 +1,0 @@
-<console-module
-	name="message-report">
-
-	<console-helper-provider
-		object-name="messageReport"/>
-
-</console-module>

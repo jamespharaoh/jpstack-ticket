@@ -1,7 +1,0 @@
-<console-module
-	name="chat-block">
-
-	<console-helper-provider
-		object-name="chatBlock"/>
-
-</console-module>

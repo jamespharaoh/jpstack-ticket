@@ -1,7 +1,0 @@
-<console-module
-	name="batch-type">
-
-	<console-helper-provider
-		object-name="batchType"/>
-
-</console-module>

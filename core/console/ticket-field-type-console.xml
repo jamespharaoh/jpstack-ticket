@@ -1,0 +1,148 @@
+<console-module
+	name="ticket-field-type">
+
+	<console-helper-provider
+		object-name="ticketFieldType"
+		view-priv="parent:manage">
+
+		<context-stuff
+			name="ticketFieldTypeName"
+			field="name"/>
+
+		<context-stuff
+			name="ticketFieldTypeId"
+			field="id"/>
+
+		<context-stuff
+			name="ticketManagerId"
+			field="ticketManager.id"/>
+
+		<run-post-processor
+			name="ticketManager"/>
+
+	</console-helper-provider>
+
+	<object-context
+		name="ticketFieldType"
+		object-name="ticketFieldType">
+
+		<list>
+
+			<object-list-page
+				form="list"/>
+
+			<object-create-page
+				form="create"/>
+
+		</list>
+
+		<object>
+
+			<object-summary-page
+				form="summary"/>
+
+			<object-settings-page
+				form="settings"
+				priv-key="ticketManager.manage"/>
+
+			<object-events-page/>
+
+		</object>
+
+	</object-context>
+
+	<forms>
+
+		<form
+			name="list"
+			object-type="ticket-field-type"
+			type="read-only">
+
+			<columns>
+
+				<name-field/>
+
+			</columns>
+
+		</form>
+
+		<form
+			name="create"
+			object-type="ticket-field-type"
+			type="read-only">
+
+			<columns>
+
+				<parent-field/>
+
+				<name-field/>
+
+				<yes-no-field
+					name="required"/>
+
+				<object-field
+					name="objectType"
+					object-type="objectType"/>
+
+				<yes-no-field
+					name="visible"/>
+
+			</columns>
+
+		</form>
+
+		<form
+			name="summary"
+			object-type="ticket-field-type"
+			type="read-only">
+
+			<columns>
+
+				<id-field/>
+				<parent-field/>
+				<code-field/>
+
+				<name-field/>
+
+				<yes-no-field
+					name="required"/>
+
+				<object-field
+					name="objectType"
+					object-type="objectType"/>
+
+				<yes-no-field
+					name="visible"/>
+
+			</columns>
+
+		</form>
+
+		<form
+			name="settings"
+			object-type="ticket-field-type"
+			type="update">
+
+			<columns>
+
+				<parent-field/>
+
+				<name-field/>
+
+				<yes-no-field
+					name="required"/>
+
+				<object-field
+					name="objectType"
+					object-type="objectType"/>
+
+				<yes-no-field
+					name="visible"/>
+
+			</columns>
+
+		</form>
+
+	</forms>
+
+</console-module>

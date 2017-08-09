@@ -1,7 +1,0 @@
-<console-module
-	name="postgresql-stat-activity">
-
-	<console-helper-provider
-		object-name="postgresqlStatActivity"/>
-
-</console-module>

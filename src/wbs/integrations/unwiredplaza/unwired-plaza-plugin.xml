@@ -1,9 +1,0 @@
-<plugin
-	name="unwired-plaza"
-	package="wbs.integrations.unwiredplaza">
-
-	<layer name="api">
-		<component class="api.UnwiredPlazaApiServletModule"/>
-	</layer>
-
-</plugin>

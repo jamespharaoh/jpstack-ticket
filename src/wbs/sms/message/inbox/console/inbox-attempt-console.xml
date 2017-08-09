@@ -1,7 +1,0 @@
-<console-module
-	name="inbox-attempt">
-
-	<console-helper-provider
-		object-name="inboxAttempt"/>
-
-</console-module>

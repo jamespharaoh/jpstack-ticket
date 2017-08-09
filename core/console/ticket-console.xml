@@ -1,0 +1,89 @@
+<console-module
+	name="ticket">
+
+	<console-helper-provider
+		object-name="ticket"
+		view-priv="parent:manage">
+
+		<context-stuff
+			name="ticketName"
+			field="id"/>
+
+		<context-stuff
+			name="ticketId"
+			field="id"/>
+
+		<context-stuff
+			name="ticketManagerId"
+			field="ticketManager.id"/>
+
+		<run-post-processor
+			name="ticketManager"/>
+
+	</console-helper-provider>
+
+	<object-context
+		name="ticket"
+		object-name="ticket">
+
+		<list>
+
+			<object-list-page
+				form="list"/>
+
+			<object-create-page
+				form="create"/>
+
+		</list>
+
+		<object>
+
+			<object-summary-page
+				form="summary"
+				priv-key="ticketManager.manage"/>
+
+			<object-settings-page
+				form="settings"
+				priv-key="ticketManager.manage"/>
+
+			<context-link
+				name="ticketNote"
+				link="ticketNote"
+				label="Notes"
+				priv-key="ticket.ticketManager.manage"/>
+
+			<object-events-page/>
+
+		</object>
+
+	</object-context>
+
+	<forms>
+
+		<form
+			name="list"
+			object-type="ticket"
+			type="read-only"
+			fields-provider="ticketListFieldsProvider"/>
+
+		<form
+			name="create"
+			object-type="ticket"
+			type="create"
+			fields-provider="ticketCreateFieldsProvider"/>
+
+		<form
+			name="summary"
+			object-type="ticket"
+			type="read-only"
+			fields-provider="ticketSummaryFieldsProvider"/>
+
+		<form
+			name="settings"
+			object-type="ticket"
+			type="update"
+			fields-provider="ticketSettingsFieldsProvider"/>
+
+	</forms>
+
+</console-module>

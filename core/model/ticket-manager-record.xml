@@ -1,0 +1,47 @@
+<record
+	name="ticketManager"
+	type="major">
+
+	<fields>
+
+		<!-- id -->
+
+		<generated-id-field/>
+
+		<!-- identity -->
+
+		<parent-field
+			type="slice"/>
+
+		<code-field/>
+
+		<!-- details -->
+
+		<name-field/>
+
+		<description-field/>
+
+		<deleted-field/>
+
+	</fields>
+
+	<collections>
+
+		<children-collection
+			type="ticketFieldType"/>
+
+		<children-collection
+			type="ticketTemplate"/>
+
+	</collections>
+
+	<priv-types>
+
+		<priv-type
+			name="Manage"
+			description="Full control of a ticket manager"
+			template="yes"/>
+
+	</priv-types>
+
+</record>

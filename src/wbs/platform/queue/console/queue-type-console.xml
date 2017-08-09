@@ -1,7 +1,0 @@
-<console-module
-	name="queue-type">
-
-	<console-helper-provider
-		object-name="queueType"/>
-
-</console-module>

@@ -1,7 +1,0 @@
-<console-module
-	name="sms-outbox-multipart-link">
-
-	<console-helper-provider
-		object-name="smsOutboxMultipartLink"/>
-
-</console-module>

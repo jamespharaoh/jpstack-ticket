@@ -1,7 +1,0 @@
-<console-module
-	name="service-type">
-
-	<console-helper-provider
-		object-name="serviceType"/>
-
-</console-module>

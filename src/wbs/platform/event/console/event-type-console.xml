@@ -1,7 +1,0 @@
-<console-module
-	name="event-type">
-
-	<console-helper-provider
-		object-name="eventType"/>
-
-</console-module>

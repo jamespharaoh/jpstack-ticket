@@ -1,7 +1,0 @@
-<console-module
-	name="chat-user-number-report">
-
-	<console-helper-provider
-		object-name="chatUserNumberReport"/>
-
-</console-module>

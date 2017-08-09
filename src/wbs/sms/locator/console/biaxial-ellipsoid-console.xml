@@ -1,7 +1,0 @@
-<console-module
-	name="biaxial-ellipsoid">
-
-	<console-helper-provider
-		object-name="biaxialEllipsoid"/>
-
-</console-module>

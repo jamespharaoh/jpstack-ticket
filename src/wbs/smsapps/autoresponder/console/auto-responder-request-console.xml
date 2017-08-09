@@ -1,7 +1,0 @@
-<console-module
-	name="auto-responder-request">
-
-	<console-helper-provider
-		object-name="autoResponderRequest"/>
-
-</console-module>

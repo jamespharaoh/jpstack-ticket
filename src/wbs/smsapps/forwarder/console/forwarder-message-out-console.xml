@@ -1,7 +1,0 @@
-<console-module
-	name="forwarder-message-out">
-
-	<console-helper-provider
-		object-name="forwarderMessageOut"/>
-
-</console-module>

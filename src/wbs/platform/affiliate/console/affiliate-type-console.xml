@@ -1,7 +1,0 @@
-<console-module
-	name="affiliate-type">
-
-	<console-helper-provider
-		object-name="affiliateType"/>
-
-</console-module>

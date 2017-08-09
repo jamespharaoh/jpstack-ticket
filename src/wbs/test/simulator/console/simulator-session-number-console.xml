@@ -1,7 +1,0 @@
-<console-module
-	name="simulator-session-number">
-
-	<console-helper-provider
-		object-name="simulatorSessionNumber"/>
-
-</console-module>

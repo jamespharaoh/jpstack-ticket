@@ -1,7 +1,0 @@
-<console-module
-	name="mercator-projection">
-
-	<console-helper-provider
-		object-name="mercatorProjection"/>
-
-</console-module>

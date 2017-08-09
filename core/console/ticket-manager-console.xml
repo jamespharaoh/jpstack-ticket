@@ -1,0 +1,142 @@
+<console-module
+	name="ticket-manager">
+
+	<console-helper-provider
+		object-name="ticketManager">
+
+		<context-stuff
+			name="ticketManagerName"
+			field="id"/>
+
+		<context-stuff
+			name="ticketManagerId"
+			field="id"/>
+
+		<context-stuff
+			name="sliceId"
+			field="slice.id"/>
+
+		<priv-key
+			name="ticketManager.manage"
+			priv="manage"/>
+
+		<run-post-processor
+			name="slice"/>
+
+	</console-helper-provider>
+
+	<object-context
+		name="ticketManager"
+		object-name="ticketManager">
+
+		<list>
+
+			<object-list-page
+				form="list"/>
+
+			<object-create-page
+				form="create"
+				target-responder="ticketManagerSettingsGeneralResponder"/>
+
+		</list>
+
+		<object>
+
+			<object-summary-page
+				form="summary"/>
+
+			<section
+				name="settings"
+				label="Settings">
+
+				<object-settings-page
+					short-name="general"
+					form="settings"/>
+
+				<context-link
+					name="ticketState"
+					link="ticketState"
+					label="States"
+					priv-key="ticketManager.manage"/>
+
+				<context-link
+					name="ticketFieldType"
+					link="ticketFieldType"
+					label="Field types"
+					priv-key="ticketManager.manage"/>
+
+			</section>
+
+			<context-link
+				name="ticket"
+				link="ticket"
+				label="Tickets"
+				priv-key="ticketManager.manage"/>
+
+			<object-events-page/>
+
+		</object>
+
+	</object-context>
+
+	<forms>
+
+		<form
+			name="list"
+			object-type="ticket-manager"
+			type="read-only">
+
+			<columns>
+
+				<parent-field/>
+				<name-field/>
+				<description-field/>
+
+			</columns>
+
+		</form>
+
+		<form
+			name="create"
+			object-type="ticket-manager"
+			type="create">
+
+			<columns>
+
+				<parent-field/>
+
+			</columns>
+
+		</form>
+
+		<form
+			name="summary"
+			object-type="ticket-manager"
+			type="read-only">
+
+			<columns>
+
+				<id-field/>
+				<parent-field/>
+				<code-field/>
+
+			</columns>
+
+		</form>
+
+		<form
+			name="settings"
+			object-type="ticket-manager"
+			type="update">
+
+			<columns>
+
+				<parent-field/>
+
+			</columns>
+
+		</form>
+
+	</forms>
+
+</console-module>

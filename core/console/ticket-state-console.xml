@@ -1,0 +1,145 @@
+<console-module
+	name="ticket-state">
+
+	<console-helper-provider
+		object-name="ticketState"
+		view-priv="parent:manage">
+
+		<context-stuff
+			name="ticketStateName"
+			field="name"/>
+
+		<context-stuff
+			name="ticketStateId"
+			field="id"/>
+
+		<context-stuff
+			name="ticketManagerId"
+			field="ticketManager.id"/>
+
+		<run-post-processor
+			name="ticketManager"/>
+
+	</console-helper-provider>
+
+	<object-context
+		name="ticketState"
+		object-name="ticketState">
+
+		<list>
+
+			<object-list-page
+				form="list"/>
+
+			<object-create-page
+				form="create"/>
+
+		</list>
+
+		<object>
+
+			<object-summary-page
+				form="summary"/>
+
+			<object-settings-page
+				form="settings"
+				priv-key="ticketManager.manage"/>
+
+			<object-events-page/>
+
+		</object>
+
+	</object-context>
+
+	<forms>
+
+		<form
+			name="list"
+			object-type="ticket-state"
+			type="read-only">
+
+			<columns>
+
+				<name-field/>
+
+			</columns>
+
+		</form>
+
+		<form
+			name="create"
+			object-type="ticket-state"
+			type="create">
+
+			<columns>
+
+				<parent-field/>
+
+				<name-field/>
+
+				<seconds-field
+					name="minimum"/>
+
+				<seconds-field
+					name="maximum"/>
+
+				<yes-no-field
+					name="showInQueue"/>
+
+			</columns>
+
+		</form>
+
+		<form
+			name="summary"
+			object-type="ticket-state"
+			type="read-only">
+
+			<columns>
+
+				<id-field/>
+				<parent-field/>
+				<code-field/>
+
+				<name-field/>
+
+				<seconds-field
+					name="minimum"/>
+
+				<seconds-field
+					name="maximum"/>
+
+				<yes-no-field
+					name="showInQueue"/>
+
+			</columns>
+
+		</form>
+
+		<form
+			name="settings"
+			object-type="ticket-state"
+			type="update">
+
+			<columns>
+
+				<parent-field/>
+
+				<name-field/>
+
+				<seconds-field
+					name="minimum"/>
+
+				<seconds-field
+					name="maximum"/>
+
+				<yes-no-field
+					name="showInQueue"/>
+
+			</columns>
+
+		</form>
+
+	</forms>
+
+</console-module>

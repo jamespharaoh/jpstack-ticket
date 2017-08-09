@@ -1,7 +1,0 @@
-<console-module
-	name="content">
-
-	<console-helper-provider
-		object-name="content"/>
-
-</console-module>

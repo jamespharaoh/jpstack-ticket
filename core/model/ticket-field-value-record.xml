@@ -1,0 +1,35 @@
+<record
+	name="ticketFieldValue"
+	type="minor">
+
+	<fields>
+
+		<!-- id -->
+
+		<generated-id-field/>
+
+		<!-- identity -->
+
+		<parent-field
+			type="ticket"/>
+
+		<identity-reference-field
+			type="ticketFieldType"/>
+
+		<!-- details -->
+
+		<string-field
+			name="stringValue"
+			nullable="yes"/>
+
+		<integer-field
+			name="integerValue"
+			nullable="yes"/>
+
+		<yes-no-field
+			name="booleanValue"
+			nullable="yes"/>
+
+	</fields>
+
+</record>

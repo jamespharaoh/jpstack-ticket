@@ -1,7 +1,0 @@
-<console-module
-	name="exception-log-type">
-
-	<console-helper-provider
-		object-name="exceptionLogType"/>
-
-</console-module>

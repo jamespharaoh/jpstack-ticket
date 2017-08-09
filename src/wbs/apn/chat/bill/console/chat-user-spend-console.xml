@@ -1,7 +1,0 @@
-<console-module
-	name="chat-user-spend">
-
-	<console-helper-provider
-		object-name="chatUserSpend"/>
-
-</console-module>

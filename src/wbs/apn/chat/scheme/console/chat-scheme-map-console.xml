@@ -1,7 +1,0 @@
-<console-module
-	name="chat-scheme-map">
-
-	<console-helper-provider
-		object-name="chatSchemeMap"/>
-
-</console-module>

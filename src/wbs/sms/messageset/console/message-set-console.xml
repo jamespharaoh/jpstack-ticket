@@ -1,7 +1,0 @@
-<console-module
-	name="message-set">
-
-	<console-helper-provider
-		object-name="messageSet"/>
-
-</console-module>

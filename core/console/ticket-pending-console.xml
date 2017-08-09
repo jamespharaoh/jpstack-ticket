@@ -1,0 +1,90 @@
+<console-module
+	name="ticket-pending">
+
+	<object-context
+		name="ticket.pending"
+		component-name="ticketPending"
+		object-name="ticket">
+
+		<object>
+
+			<context-tab-responder-page
+				name="history"/>
+
+			<context-action-page
+				name="form"/>
+
+		</object>
+
+	</object-context>
+
+	<forms>
+
+		<form
+			name="history-ticket"
+			object-type="ticket"
+			type="read-only">
+
+			<columns>
+
+				<code-field/>
+
+				<integer-field
+					name="numNotes"/>
+
+				<integer-field
+					name="numFields"/>
+
+				<timestamp-field
+					name="timestamp"/>
+
+				<object-field
+					name="ticketState"
+					label="State"
+					object-type="ticketState"/>
+
+			</columns>
+
+		</form>
+
+		<form
+			name="history-note"
+			object-type="ticket-note"
+			type="read-only">
+
+			<columns>
+
+				<index-field/>
+
+				<text-field
+					name="noteText"/>
+
+			</columns>
+
+		</form>
+
+		<form
+			name="history-state"
+			object-type="ticket-state"
+			type="read-only">
+
+			<columns>
+
+				<name-field/>
+
+				<yes-no-field
+					name="showInQueue"/>
+
+				<integer-field
+					name="minimum"/>
+
+				<integer-field
+					name="maximum"/>
+
+			</columns>
+
+		</form>
+
+	</forms>
+
+</console-module>

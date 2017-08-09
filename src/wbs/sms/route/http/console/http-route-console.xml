@@ -1,7 +1,0 @@
-<console-module
-	name="http-route">
-
-	<console-helper-provider
-		object-name="httpRoute"/>
-
-</console-module>

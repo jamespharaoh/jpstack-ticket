@@ -1,7 +1,0 @@
-<console-module
-	name="sms-tracker-type">
-
-	<console-helper-provider
-		object-name="smsTrackerType"/>
-
-</console-module>

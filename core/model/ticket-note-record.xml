@@ -1,0 +1,28 @@
+<record
+	name="ticketNote"
+	type="minor">
+
+	<fields>
+
+		<!-- id -->
+
+		<generated-id-field/>
+
+		<!-- identity -->
+
+		<parent-field
+			type="ticket"
+			cacheable="yes"/>
+
+		<index-field
+			counter="numNotes"
+			cacheable="yes"/>
+
+		<!-- data -->
+
+		<string-field
+			name="noteText"/>
+
+	</fields>
+
+</record>

@@ -1,7 +1,0 @@
-<console-module
-	name="smpp-route">
-
-	<console-helper-provider
-		object-name="smppRoute"/>
-
-</console-module>

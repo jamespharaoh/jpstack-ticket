@@ -1,7 +1,0 @@
-<console-module
-	name="logging-dynamic-context-invocation">
-
-	<console-helper-provider
-		object-name="loggingDynamicContextInvocation"/>
-
-</console-module>

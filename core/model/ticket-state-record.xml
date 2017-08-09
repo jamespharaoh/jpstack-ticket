@@ -1,0 +1,63 @@
+<record
+	name="ticketState"
+	type="minor">
+
+	<fields>
+
+		<!-- id -->
+
+		<generated-id-field/>
+
+		<!-- identity -->
+
+		<parent-field
+			type="ticketManager"/>
+
+		<code-field/>
+
+		<!-- details -->
+
+		<name-field/>
+
+		<description-field/>
+
+		<deleted-field/>
+
+		<!-- settings -->
+
+		<yes-no-field
+			name="showInQueue"/>
+
+		<integer-field
+			name="minimum"/>
+
+		<integer-field
+			name="maximum"/>
+
+		<integer-field
+			name="preferredQueueTime"/>
+
+	</fields>
+
+	<priv-types>
+
+		<priv-type
+			name="Manage"
+			description="Full control of a ticket state"
+			template="yes"/>
+
+	</priv-types>
+
+	<queue-types>
+
+		<queue-type
+			name="Default"
+			description="Pending tickets for a ticket type"
+			subject="ticket"
+			ref="ticket"
+			preferred-user-delay="preferredQueueTime"
+			supervisor-priv="this:manage"/>
+
+	</queue-types>
+
+</record>

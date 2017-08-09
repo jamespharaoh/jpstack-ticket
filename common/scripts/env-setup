@@ -1,8 +1,0 @@
-#!/bin/bash
-
-export WBS_HOME="$(pwd)"
-export WBS_DEPLOYMENT_NAME="dev"
-export WBS_BUILD_PROPERTIES="$WBS_HOME/config/build.properties"
-export WBS_CONFIG_XML="$WBS_HOME/config/wbs-config.xml"
-
-# ex: noet ts=4 filetype=sh

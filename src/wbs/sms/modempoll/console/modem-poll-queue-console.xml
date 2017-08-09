@@ -1,7 +1,0 @@
-<console-module
-	name="modem-poll-queue">
-
-	<console-helper-provider
-		object-name="modemPollQueue"/>
-
-</console-module>

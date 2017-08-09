@@ -1,9 +1,0 @@
-<plugin
-	name="chat-api"
-	package="wbs.apn.chat.api">
-
-	<layer name="api">
-		<component class="ChatApiServletModule"/>
-	</layer>
-
-</plugin>

@@ -1,0 +1,69 @@
+<record
+	name="ticket"
+	type="common">
+
+	<fields>
+
+		<!-- id -->
+
+		<generated-id-field/>
+
+		<!-- identity -->
+
+		<parent-field
+			type="ticketManager"/>
+
+		<code-field/>
+
+		<!-- state -->
+
+		<yes-no-field
+			name="queued"
+			default="yes"/>
+
+		<reference-field
+			type="ticketState"/>
+
+		<reference-field
+			type="queueItem"
+			nullable="yes"/>
+
+		<!-- statistics -->
+
+		<timestamp-field
+			name="timestamp"
+			column-type="iso"/>
+
+		<integer-field
+			name="numNotes"
+			default="0"/>
+
+		<integer-field
+			name="numFields"
+			default="0"/>
+
+	</fields>
+
+	<collections>
+
+		<children-collection
+			type="ticketNote"/>
+
+		<children-mapping
+			type="ticketFieldValue"
+			map-column="ticket_field_type_id"
+			map-type="integer"/>
+
+	</collections>
+
+	<background-processes>
+
+		<background-process
+			object-type="ticket"
+			name="State time"
+			description="Automatically change ticket state after a period of time"
+			frequency="10 seconds"/>
+
+	</background-processes>
+
+</record>

@@ -1,7 +1,0 @@
-<console-module
-	name="lock">
-
-	<console-helper-provider
-		object-name="lock"/>
-
-</console-module>

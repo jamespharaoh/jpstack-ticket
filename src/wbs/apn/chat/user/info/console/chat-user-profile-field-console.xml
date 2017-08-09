@@ -1,7 +1,0 @@
-<console-module
-	name="chat-user-profile-field">
-
-	<console-helper-provider
-		object-name="chatUserProfileField"/>
-
-</console-module>

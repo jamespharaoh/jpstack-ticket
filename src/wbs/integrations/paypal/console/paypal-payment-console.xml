@@ -1,7 +1,0 @@
-<console-module
-	name="paypal-payment">
-
-	<console-helper-provider
-		object-name="paypalPayment"/>
-
-</console-module>

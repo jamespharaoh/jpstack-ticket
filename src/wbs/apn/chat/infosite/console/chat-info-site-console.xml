@@ -1,7 +1,0 @@
-<console-module
-	name="chat-info-site">
-
-	<console-helper-provider
-		object-name="chatInfoSite"/>
-
-</console-module>

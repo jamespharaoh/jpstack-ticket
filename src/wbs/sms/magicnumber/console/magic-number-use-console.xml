@@ -1,7 +1,0 @@
-<console-module
-	name="magic-number-use">
-
-	<console-helper-provider
-		object-name="magicNumberUse"/>
-
-</console-module>

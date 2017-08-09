@@ -1,7 +1,0 @@
-<console-module
-	name="chat-promo-user">
-
-	<console-helper-provider
-		object-name="chatPromoUser"/>
-
-</console-module>

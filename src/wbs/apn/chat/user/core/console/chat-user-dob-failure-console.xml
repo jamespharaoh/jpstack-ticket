@@ -1,7 +1,0 @@
-<console-module
-	name="chat-user-dob-failure">
-
-	<console-helper-provider
-		object-name="chatUserDobFailure"/>
-
-</console-module>

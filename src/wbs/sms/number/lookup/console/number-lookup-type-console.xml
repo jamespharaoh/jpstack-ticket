@@ -1,7 +1,0 @@
-<console-module
-	name="number-lookup-type">
-
-	<console-helper-provider
-		object-name="numberLookupType"/>
-
-</console-module>

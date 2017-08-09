@@ -1,9 +1,0 @@
-<plugin
-	name="all-star-misc"
-	package="wbs.allstar.misc">
-
-	<console-modules>
-		<console-module name="all-star-misc"/>
-	</console-modules>
-
-</plugin>

@@ -1,9 +1,0 @@
-<plugin
-	name="apn-misc"
-	package="wbs.apn.misc">
-
-	<console-modules>
-		<console-module name="apn-misc"/>
-	</console-modules>
-
-</plugin>

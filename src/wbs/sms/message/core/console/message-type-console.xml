@@ -1,7 +1,0 @@
-<console-module
-	name="message-type">
-
-	<console-helper-provider
-		object-name="messageType"/>
-
-</console-module>

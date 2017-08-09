@@ -1,9 +1,0 @@
-<plugin
-	name="hooks"
-	package="wbs.platform.hooks">
-
-	<layer name="logic">
-		<component class="logic.HooksManager"/>
-	</layer>
-
-</plugin>

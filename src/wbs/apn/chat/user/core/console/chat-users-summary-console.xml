@@ -1,7 +1,0 @@
-<console-module
-	name="chat-users-summary">
-
-	<console-helper-provider
-		object-name="chatUsersSummary"/>
-
-</console-module>

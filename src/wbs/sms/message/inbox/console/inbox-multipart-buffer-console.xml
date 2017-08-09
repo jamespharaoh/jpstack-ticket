@@ -1,7 +1,0 @@
-<console-module
-	name="inbox-multipart-buffer">
-
-	<console-helper-provider
-		object-name="inboxMultipartBuffer"/>
-
-</console-module>

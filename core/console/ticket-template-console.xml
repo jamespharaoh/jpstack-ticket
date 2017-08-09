@@ -1,0 +1,7 @@
+<console-module
+	name="ticket-template">
+
+	<console-helper-provider
+		object-name="ticketTemplate"/>
+
+</console-module>

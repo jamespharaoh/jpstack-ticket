@@ -1,9 +1,0 @@
-<plugin
-	name="api-component"
-	package="wbs.api.component">
-
-	<layer name="api">
-		<bootstrap-component class="ApiComponentPlugin"/>
-	</layer>
-
-</plugin>

@@ -1,7 +1,0 @@
-<console-module
-	name="route-tester">
-
-	<console-helper-provider
-		object-name="routeTester"/>
-
-</console-module>

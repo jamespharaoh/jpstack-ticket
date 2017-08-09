@@ -1,7 +1,0 @@
-<console-module
-	name="send-sms-message">
-
-	<console-helper-provider
-		object-name="sendSmsMessage"/>
-
-</console-module>

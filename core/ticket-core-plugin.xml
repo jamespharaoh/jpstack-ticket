@@ -1,0 +1,48 @@
+<plugin
+	name="ticket-core"
+	package="wbs.services.ticket.core">
+
+	<plugin-dependencies>
+		<plugin-dependency name="menu"/>
+		<plugin-dependency name="platform-scaffold"/>
+	</plugin-dependencies>
+
+	<models>
+		<enum-type name="ticketFieldDataType"/>
+		<model name="ticketManager"/>
+		<model name="ticketTemplate"/>
+		<model name="ticket"/>
+		<model name="ticketNote"/>
+		<model name="ticketFieldType"/>
+		<model name="ticketFieldValue"/>
+		<model name="ticketState"/>
+	</models>
+
+	<fixtures>
+		<fixture name="ticket"/>
+	</fixtures>
+
+	<layer name="console">
+		<component class="console.TicketObjectFieldsProvider"/>
+		<component class="console.TicketManagerQueueConsole"/>
+		<component class="console.TicketPendingFormAction"/>
+		<component class="console.TicketPendingFormResponder"/>
+		<component class="console.TicketPendingHistoryPart"/>
+	</layer>
+
+	<layer name="daemon">
+		<component class="daemon.TicketStateTimeDaemon"/>
+	</layer>
+
+	<console-modules>
+		<console-module name="ticket-manager"/>
+		<console-module name="ticket"/>
+		<console-module name="ticket-pending"/>
+		<console-module name="ticket-state"/>
+		<console-module name="ticket-field-type"/>
+		<console-module name="ticket-field-value"/>
+		<console-module name="ticket-note"/>
+		<console-module name="ticket-template"/>
+	</console-modules>
+
+</plugin>

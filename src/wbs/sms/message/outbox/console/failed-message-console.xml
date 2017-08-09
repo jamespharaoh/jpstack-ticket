@@ -1,7 +1,0 @@
-<console-module
-	name="failed-message">
-
-	<console-helper-provider
-		object-name="failedMessage"/>
-
-</console-module>

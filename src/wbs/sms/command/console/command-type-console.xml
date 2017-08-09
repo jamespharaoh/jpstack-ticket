@@ -1,7 +1,0 @@
-<console-module
-	name="command-type">
-
-	<console-helper-provider
-		object-name="commandType"/>
-
-</console-module>

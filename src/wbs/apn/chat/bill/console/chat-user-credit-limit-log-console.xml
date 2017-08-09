@@ -1,7 +1,0 @@
-<console-module
-	name="chat-user-credit-limit-log">
-
-	<console-helper-provider
-		object-name="chatUserCreditLimitLog"/>
-
-</console-module>

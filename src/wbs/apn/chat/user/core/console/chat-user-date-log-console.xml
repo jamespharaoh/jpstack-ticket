@@ -1,7 +1,0 @@
-<console-module
-	name="chat-user-date-log">
-
-	<console-helper-provider
-		object-name="chatUserDateLog"/>
-
-</console-module>

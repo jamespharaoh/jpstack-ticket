@@ -1,7 +1,0 @@
-<console-module
-	name="alerts-number">
-
-	<console-helper-provider
-		 object-name="alertsNumber"/>
-
-</console-module>

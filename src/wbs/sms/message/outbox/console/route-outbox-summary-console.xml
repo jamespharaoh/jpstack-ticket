@@ -1,7 +1,0 @@
-<console-module
-	name="route-outbox-summary">
-
-	<console-helper-provider
-		object-name="routeOutboxSummary"/>
-
-</console-module>

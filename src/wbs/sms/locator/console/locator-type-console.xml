@@ -1,7 +1,0 @@
-<console-module
-	name="locator-type">
-
-	<console-helper-provider
-		object-name="locatorType"/>
-
-</console-module>

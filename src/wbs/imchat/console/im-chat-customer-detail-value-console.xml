@@ -1,7 +1,0 @@
-<console-module
-	name="im-chat-customer-detail-value">
-
-	<console-helper-provider
-		object-name="imChatCustomerDetailValue"/>
-
-</console-module>

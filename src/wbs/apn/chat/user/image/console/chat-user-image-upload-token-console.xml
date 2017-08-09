@@ -1,7 +1,0 @@
-<console-module
-	name="chat-user-image-upload-token">
-
-	<console-helper-provider
-		object-name="chatUserImageUploadToken"/>
-
-</console-module>

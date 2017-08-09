@@ -1,8 +1,0 @@
-<console-module
-	name="status">
-
-	<simple-responder-file
-		path="/status"
-			name=""/>
-
-</console-module>

@@ -1,7 +1,0 @@
-<console-module
-	name="update-log">
-
-	<console-helper-provider
-		object-name="updateLog"/>
-
-</console-module>

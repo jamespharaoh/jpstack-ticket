@@ -1,7 +1,0 @@
-<console-module
-	name="wap-push-message">
-
-	<console-helper-provider
-		object-name="wapPushMessage"/>
-
-</console-module>

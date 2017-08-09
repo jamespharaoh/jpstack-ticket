@@ -1,0 +1,38 @@
+<record
+	name="ticketTemplate"
+	type="minor">
+
+	<fields>
+
+		<!-- id -->
+
+		<generated-id-field/>
+
+		<!-- identity -->
+
+		<parent-field
+			type="ticketManager"/>
+
+		<code-field/>
+
+		<!-- details -->
+
+		<name-field/>
+
+		<description-field/>
+
+		<deleted-field/>
+
+		<!-- settings -->
+
+		<reference-field
+			type="ticketState"
+			nullable="yes"/>
+
+		<timestamp-field
+			name="timestamp"
+			column-type="iso"/>
+
+	</fields>
+
+</record>

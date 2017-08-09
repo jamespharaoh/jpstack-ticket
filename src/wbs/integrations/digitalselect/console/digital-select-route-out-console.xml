@@ -1,7 +1,0 @@
-<console-module
-	name="digital-select-route-out">
-
-	<console-helper-provider
-		object-name="digitalSelectRouteOut"/>
-
-</console-module>

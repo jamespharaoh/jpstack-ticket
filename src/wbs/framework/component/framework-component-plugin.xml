@@ -1,9 +1,0 @@
-<plugin
-	name="framework-component"
-	package="wbs.framework.component">
-
-	<layer name="config">
-		<component class="config.GenericConfigLoader"/>
-	</layer>
-
-</plugin>

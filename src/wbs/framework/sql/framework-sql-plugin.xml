@@ -1,9 +1,0 @@
-<plugin
-	name="framework-sql"
-	package="wbs.framework.sql">
-
-	<layer name="sql">
-		<component class="SqlLogicImplementation"/>
-	</layer>
-
-</plugin>

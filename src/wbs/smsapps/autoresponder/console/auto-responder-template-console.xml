@@ -1,7 +1,0 @@
-<console-module
-	name="auto-responder-template">
-
-	<console-helper-provider
-		object-name="autoResponderTemplate"/>
-
-</console-module>

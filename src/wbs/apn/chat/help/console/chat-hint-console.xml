@@ -1,7 +1,0 @@
-<console-module
-	name="chat-hint">
-
-	<console-helper-provider
-		object-name="chatHint"/>
-
-</console-module>
