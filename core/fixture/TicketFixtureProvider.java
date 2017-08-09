@@ -7,11 +7,12 @@ import wbs.framework.component.annotations.PrototypeComponent;
 import wbs.framework.component.annotations.SingletonDependency;
 import wbs.framework.component.config.WbsConfig;
 import wbs.framework.database.Database;
-import wbs.framework.database.NestedTransaction;
-import wbs.framework.database.Transaction;
+import wbs.framework.database.OwnedTransaction;
 import wbs.framework.entity.record.GlobalId;
 import wbs.framework.fixtures.FixtureProvider;
 import wbs.framework.logging.LogContext;
+import wbs.framework.logging.OwnedTaskLogger;
+import wbs.framework.logging.TaskLogger;
 import wbs.framework.object.ObjectManager;
 
 import wbs.platform.menu.model.MenuGroupObjectHelper;
@@ -90,22 +91,22 @@ class TicketFixtureProvider
 	@Override
 	public
 	void createFixtures (
-			@NonNull Transaction parentTransaction) {
+			@NonNull TaskLogger parentTaskLogger) {
 
 		try (
 
-			NestedTransaction transaction =
-				parentTransaction.nestTransaction (
-					logContext,
+			OwnedTaskLogger taskLogger =
+				logContext.nestTaskLogger (
+					parentTaskLogger,
 					"createFixtures");
 
 		) {
 
 			createMenuItems (
-				transaction);
+				taskLogger);
 
 			createTicketManager (
-				transaction);
+				taskLogger);
 
 		}
 
@@ -113,13 +114,14 @@ class TicketFixtureProvider
 
 	private
 	void createMenuItems (
-			@NonNull Transaction parentTransaction) {
+			@NonNull TaskLogger parentTaskLogger) {
 
 		try (
 
-			NestedTransaction transaction =
-				parentTransaction.nestTransaction (
+			OwnedTransaction transaction =
+				database.beginReadWrite (
 					logContext,
+					parentTaskLogger,
 					"createMenuItems");
 
 		) {
@@ -158,19 +160,22 @@ class TicketFixtureProvider
 
 			);
 
+			transaction.commit ();
+
 		}
 
 	}
 
 	private
 	void createTicketManager (
-			@NonNull Transaction parentTransaction) {
+			@NonNull TaskLogger parentTaskLogger) {
 
 		try (
 
-			NestedTransaction transaction =
-				parentTransaction.nestTransaction (
+			OwnedTransaction transaction =
+				database.beginReadWrite (
 					logContext,
+					parentTaskLogger,
 					"createTicketManager");
 
 		) {
@@ -356,8 +361,6 @@ class TicketFixtureProvider
 					15l)
 
 			);
-
-			transaction.flush ();
 
 			/*
 			TicketRec ticket =
@@ -632,6 +635,8 @@ class TicketFixtureProvider
 
 			}
 			*/
+
+			transaction.commit ();
 
 		}
 
