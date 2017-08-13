@@ -1,5 +1,5 @@
 <record
-	name="ticketFieldValue"
+	name="ticket-field-value"
 	type="minor">
 
 	<fields>
@@ -14,20 +14,20 @@
 			type="ticket"/>
 
 		<identity-reference-field
-			type="ticketFieldType"/>
+			type="ticket-field-type"/>
 
 		<!-- details -->
 
 		<string-field
-			name="stringValue"
+			name="string-value"
 			nullable="yes"/>
 
 		<integer-field
-			name="integerValue"
+			name="integer-value"
 			nullable="yes"/>
 
 		<yes-no-field
-			name="booleanValue"
+			name="boolean-value"
 			nullable="yes"/>
 
 	</fields>

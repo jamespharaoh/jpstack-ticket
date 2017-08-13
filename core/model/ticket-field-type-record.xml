@@ -1,5 +1,5 @@
 <record
-	name="ticketFieldType"
+	name="ticket-field-type"
 	type="minor">
 
 	<fields>
@@ -11,7 +11,7 @@
 		<!-- identity -->
 
 		<parent-field
-			type="ticketManager"/>
+			type="ticket-manager"/>
 
 		<code-field/>
 
@@ -29,11 +29,11 @@
 			name="required"/>
 
 		<enum-field
-			name="dataType"
-			type="ticketFieldDataType"/>
+			name="data-type"
+			type="ticket-field-data-type"/>
 
 		<reference-field
-			type="objectType"
+			type="object-type"
 			nullable="yes"/>
 
 		<yes-no-field

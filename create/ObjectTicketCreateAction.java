@@ -431,7 +431,7 @@ class ObjectTicketCreateAction <
 					userConsoleLogic.userRequired (
 						transaction),
 					objectRef,
-					consoleHelper.shortName (),
+					consoleHelper.shortNameSingular (),
 					ticketManager);
 
 			} else {
@@ -464,7 +464,7 @@ class ObjectTicketCreateAction <
 					optionalOf (
 						objectRef),
 					optionalOf (
-						consoleHelper.shortName ()));
+						consoleHelper.shortNameSingular ()));
 
 			}
 
@@ -478,7 +478,7 @@ class ObjectTicketCreateAction <
 				stringFormat (
 					"%s created",
 					capitalise (
-						consoleHelper.shortName ())));
+						consoleHelper.shortNameSingular ())));
 
 			requestContext.setEmptyFormData ();
 

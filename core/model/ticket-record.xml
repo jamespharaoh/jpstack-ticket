@@ -11,7 +11,7 @@
 		<!-- identity -->
 
 		<parent-field
-			type="ticketManager"/>
+			type="ticket-manager"/>
 
 		<code-field/>
 
@@ -22,10 +22,10 @@
 			default="yes"/>
 
 		<reference-field
-			type="ticketState"/>
+			type="ticket-state"/>
 
 		<reference-field
-			type="queueItem"
+			type="queue-item"
 			nullable="yes"/>
 
 		<!-- statistics -->
@@ -35,11 +35,11 @@
 			column-type="iso"/>
 
 		<integer-field
-			name="numNotes"
+			name="num-notes"
 			default="0"/>
 
 		<integer-field
-			name="numFields"
+			name="num-fields"
 			default="0"/>
 
 	</fields>
@@ -47,10 +47,10 @@
 	<collections>
 
 		<children-collection
-			type="ticketNote"/>
+			type="ticket-note"/>
 
 		<children-mapping
-			type="ticketFieldValue"
+			type="ticket-field-value"
 			map-column="ticket_field_type_id"
 			map-type="integer"/>
 

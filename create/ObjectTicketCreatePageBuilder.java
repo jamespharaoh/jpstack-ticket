@@ -340,7 +340,7 @@ class ObjectTicketCreatePageBuilder
 
 			.title (
 				capitalise (
-					consoleHelper.friendlyName () + " create"))
+					consoleHelper.friendlyNameSingular () + " create"))
 
 			.pagePartFactory (
 				partFactory)
