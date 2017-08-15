@@ -26,8 +26,8 @@
 	</fixtures>
 
 	<layer name="console">
-		<component class="console.TicketObjectFieldsProvider"/>
 		<component class="console.TicketManagerQueueConsole"/>
+		<component class="console.TicketObjectFieldsProvider"/>
 		<component class="console.TicketPendingFormAction"/>
 		<component class="console.TicketPendingFormResponder"/>
 		<component class="console.TicketPendingHistoryPart"/>
