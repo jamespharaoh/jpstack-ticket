@@ -1,5 +1,5 @@
 <record
-	name="ticketNote"
+	name="ticket-note"
 	type="minor">
 
 	<fields>
@@ -15,13 +15,13 @@
 			cacheable="yes"/>
 
 		<index-field
-			counter="numNotes"
+			counter="num-notes"
 			cacheable="yes"/>
 
 		<!-- data -->
 
 		<string-field
-			name="noteText"/>
+			name="note-text"/>
 
 	</fields>
 

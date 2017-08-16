@@ -1,5 +1,5 @@
 <record
-	name="ticketManager"
+	name="ticket-manager"
 	type="major">
 
 	<fields>
@@ -28,10 +28,10 @@
 	<collections>
 
 		<children-collection
-			type="ticketFieldType"/>
+			type="ticket-field-type"/>
 
 		<children-collection
-			type="ticketTemplate"/>
+			type="ticket-template"/>
 
 	</collections>
 

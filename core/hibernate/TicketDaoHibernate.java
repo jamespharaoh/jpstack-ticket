@@ -10,7 +10,7 @@ import wbs.framework.component.annotations.ClassSingletonDependency;
 import wbs.framework.component.annotations.SingletonComponent;
 import wbs.framework.database.NestedTransaction;
 import wbs.framework.database.Transaction;
-import wbs.framework.hibernate.HibernateDao;
+import wbs.framework.hibernate.HibernateDaoLegacy;
 import wbs.framework.logging.LogContext;
 
 import wbs.services.ticket.core.model.TicketDao;
@@ -21,7 +21,7 @@ import wbs.services.ticket.core.model.TicketRec;
 @SingletonComponent ("ticketDaoHibernate")
 public
 class TicketDaoHibernate
-	extends HibernateDao
+	extends HibernateDaoLegacy
 	implements TicketDao {
 
 	// singleton dependencies

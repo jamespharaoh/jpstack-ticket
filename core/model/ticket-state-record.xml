@@ -1,5 +1,5 @@
 <record
-	name="ticketState"
+	name="ticket-state"
 	type="minor">
 
 	<fields>
@@ -11,7 +11,7 @@
 		<!-- identity -->
 
 		<parent-field
-			type="ticketManager"/>
+			type="ticket-manager"/>
 
 		<code-field/>
 
@@ -26,7 +26,7 @@
 		<!-- settings -->
 
 		<yes-no-field
-			name="showInQueue"/>
+			name="show-in-queue"/>
 
 		<integer-field
 			name="minimum"/>
@@ -35,7 +35,7 @@
 			name="maximum"/>
 
 		<integer-field
-			name="preferredQueueTime"/>
+			name="preferred-queue-time"/>
 
 	</fields>
 

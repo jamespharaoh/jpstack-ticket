@@ -8,14 +8,17 @@
 	</plugin-dependencies>
 
 	<models>
-		<enum-type name="ticketFieldDataType"/>
-		<model name="ticketManager"/>
-		<model name="ticketTemplate"/>
+
+		<enum-type name="ticket-field-data-type"/>
+
+		<model name="ticket-manager"/>
+		<model name="ticket-template"/>
 		<model name="ticket"/>
-		<model name="ticketNote"/>
-		<model name="ticketFieldType"/>
-		<model name="ticketFieldValue"/>
-		<model name="ticketState"/>
+		<model name="ticket-note"/>
+		<model name="ticket-field-type"/>
+		<model name="ticket-field-value"/>
+		<model name="ticket-state"/>
+
 	</models>
 
 	<fixtures>
@@ -23,8 +26,8 @@
 	</fixtures>
 
 	<layer name="console">
-		<component class="console.TicketObjectFieldsProvider"/>
 		<component class="console.TicketManagerQueueConsole"/>
+		<component class="console.TicketObjectFieldsProvider"/>
 		<component class="console.TicketPendingFormAction"/>
 		<component class="console.TicketPendingFormResponder"/>
 		<component class="console.TicketPendingHistoryPart"/>
